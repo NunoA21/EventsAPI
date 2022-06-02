@@ -1,3 +1,4 @@
+using EventsAPI.DataBase;
 using EventsAPI.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,7 @@ namespace EventsAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var teste = Environment.GetEnvironmentVariable("MONGODB_PASS");
+            var teste = new SetupMongoDB().GetEventsAPIDatabase();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

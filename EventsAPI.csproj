@@ -15,9 +15,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="DataBase\SetupMongoDB.cs" />
+    <Compile Include="Helpers\APIManagerHelper.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MongoDB.Bson" Version="2.15.1" />
     <PackageReference Include="MongoDB.Driver" Version="2.15.1" />
-    <PackageReference Include="MongoDB.Driver.Core" Version="2.15.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
