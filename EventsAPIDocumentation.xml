@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventsAPI</name>
+    </assembly>
+    <members>
+        <member name="M:EventsAPI.Controllers.StudentController.GetStudentsList">
+            <summary>
+            Gets the schools students list
+            </summary>
+            <returns>list of students</returns>
+        </member>
+        <member name="M:EventsAPI.Controllers.StudentController.GetStudent(System.Int32)">
+            <summary>
+            Gets a specific student
+            </summary>
+            <param name="id">id of the required student</param>
+            <returns>the required student</returns>
+        </member>
+        <member name="M:EventsAPI.Controllers.StudentController.Post(EventsAPI.Models.Student)">
+            <summary>
+            Inserts a new student in the system
+            </summary>
+            <param name="student">student to create</param>
+        </member>
+        <member name="M:EventsAPI.Controllers.StudentController.Update(EventsAPI.Models.Student)">
+            <summary>
+            Updates a specific student 
+            </summary>
+            <param name="id">student to update</param>
+        </member>
+        <member name="M:EventsAPI.Controllers.StudentController.Delete(System.Int32)">
+            <summary>
+            Deletes a specific student
+            </summary>
+            <param name="id">student to delete</param>
+        </member>
+    </members>
+</doc>

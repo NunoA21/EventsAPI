@@ -1,3 +1,4 @@
+using EventsAPI.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,7 +10,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace EventsAPI
@@ -26,11 +29,13 @@ namespace EventsAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var teste = Environment.GetEnvironmentVariable("MONGODB_PASS");
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EventsAPI", Version = "v1" });
+                c.IncludeXmlComments(Path.Combine(Environment.CurrentDirectory, APIManagerHelper.DocumentationFile));
             });
         }
 
